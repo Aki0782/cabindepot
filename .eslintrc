@@ -84,7 +84,12 @@
         "no-console": "off",
         "no-undef": "off",
         "no-underscore-dangle": "off",
-        "object-property-newline": "error",
+        "object-property-newline": [
+            "error",
+            {
+                "allowAllPropertiesOnSameLine": true
+            }
+        ],
         "prefer-destructuring": [
             "error",
             {

@@ -1,0 +1,23 @@
+.sidebarContainer {
+  color: var(--color-white);
+
+  .list {
+    display: flex;
+    flex-flow: column;
+    gap: var(--s-48);
+
+    .listitem {
+      display: flex;
+      justify-content: start;
+      align-content: center;
+      gap: var(--s-18);
+      font-size: var(--s-20);
+      text-decoration: none;
+      color: var(--color-white);
+
+      &.active {
+        color: var(--color-purple);
+      }
+    }
+  }
+}

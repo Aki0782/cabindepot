@@ -6,8 +6,7 @@
     },
     "root": true,
     "extends": [
-        "standard-with-typescript",
-        "plugin:@typescript-eslint/recommended",
+        "react-app",
         "plugin:@tanstack/eslint-plugin-query/recommended",
         "prettier"
     ],
@@ -23,10 +22,8 @@
         ]
     },
     "plugins": [
-        "react",
         "prettier",
-        "jest",
-        "@typescript-eslint"
+        "jest"
     ],
     "rules": {
         "prettier/prettier": [
@@ -47,6 +44,7 @@
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/member-delimiter-style": "off",
         "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/restrict-plus-operands": "error",
         "@typescript-eslint/no-empty-function": "off",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/space-before-function-paren": "off",

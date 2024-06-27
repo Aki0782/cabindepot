@@ -1,11 +1,21 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import Landing from "./pages/Landing";
+import Overview from "./pages/Overview";
+
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Akhil...</div>} />
+        <Route path="/" element={<Landing />}>
+          <Route path="" element={<Overview />} />
+          <Route path="orders" element={<Overview />} />
+          <Route path="invoices" element={<Overview />} />
+          <Route path="contacts" element={<Overview />} />
+          <Route path="assets" element={<Overview />} />
+          <Route path="users" element={<Overview />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

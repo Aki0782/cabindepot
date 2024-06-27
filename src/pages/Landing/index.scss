@@ -1,0 +1,19 @@
+.landingContainer {
+  display: flex;
+}
+
+.sidebar {
+  flex-basis: 15%;
+  flex-shrink: 0;
+  background-color: var(--color-background);
+  height: 100vh;
+  padding-top: var(--s-64);
+  padding-left: var(--s-40);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

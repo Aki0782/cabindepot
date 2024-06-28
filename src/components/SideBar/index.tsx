@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   MdDashboard,
   MdOutlineShoppingCartCheckout,
@@ -7,13 +7,15 @@ import {
   MdOutlineShoppingCart
 } from "react-icons/md";
 import { TbUserCog } from "react-icons/tb";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./index.scss";
 type SideBarProps = {
   getCompoentName: (a: string) => void;
 };
 
 const SideBar: React.FC<SideBarProps> = ({ getCompoentName }) => {
+  const location = useLocation();
+
   const config = [
     {
       name: "Overview",
@@ -47,14 +49,19 @@ const SideBar: React.FC<SideBarProps> = ({ getCompoentName }) => {
     }
   ];
 
+  useEffect(() => {
+    const currentItem = config.find((item) => item.path === location.pathname) as (typeof config)[0];
+
+    getCompoentName(location.pathname === "" ? config[0].name : currentItem.name);
+  }, [location.pathname, getCompoentName]);
+
   return (
     <div className="sidebarContainer">
       <nav className="list">
         {config.map((item) => (
           <NavLink
+            key={item.name}
             className={({ isActive }) => {
-              isActive && getCompoentName(item.name);
-
               return isActive ? "listitem active" : "listitem";
             }}
             to={item.path}

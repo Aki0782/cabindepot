@@ -1,5 +1,6 @@
 .landingContainer {
   display: flex;
+  background-color: var(--color-contentbackground);
 }
 
 .sidebar {
@@ -13,7 +14,4 @@
 
 .content {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

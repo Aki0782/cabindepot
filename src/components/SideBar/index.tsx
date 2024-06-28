@@ -3,9 +3,10 @@ import {
   MdDashboard,
   MdOutlineShoppingCartCheckout,
   MdOutlineContacts,
-  MdOutlineInsertDriveFile
+  MdOutlineInsertDriveFile,
+  MdOutlineShoppingCart
 } from "react-icons/md";
-import { TbFileInvoice, TbUserCog } from "react-icons/tb";
+import { TbUserCog } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 import "./index.scss";
 type SideBarProps = {
@@ -25,9 +26,9 @@ const SideBar: React.FC<SideBarProps> = ({ getCompoentName }) => {
       icon: <MdOutlineShoppingCartCheckout />
     },
     {
-      name: "Invoices",
-      path: "/invoices",
-      icon: <TbFileInvoice />
+      name: "Products",
+      path: "/products",
+      icon: <MdOutlineShoppingCart />
     },
     {
       name: "Assets",

@@ -52,7 +52,7 @@ const SideBar: React.FC<SideBarProps> = ({ getCompoentName }) => {
   useEffect(() => {
     const currentItem = config.find((item) => item.path === location.pathname) as (typeof config)[0];
 
-    getCompoentName(location.pathname === "" ? config[0].name : currentItem.name);
+    getCompoentName(location.pathname === "" ? config[0].name : currentItem?.name);
   }, [location.pathname, getCompoentName]);
 
   return (

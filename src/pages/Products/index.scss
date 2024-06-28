@@ -1,0 +1,10 @@
+.productsContainer {
+  h1 {
+    margin-bottom: var(--s-20);
+  }
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-24);
+  }
+}

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Orders from "./pages/Orders/Orders";
 import Overview from "./pages/Overview";
+import Products from "./pages/Products";
 
 const App: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Landing />}>
           <Route path="" element={<Overview />} />
           <Route path="orders" element={<Orders />} />
-          <Route path="invoices" element={<Overview />} />
+          <Route path="products" element={<Products />} />
           <Route path="contacts" element={<Overview />} />
           <Route path="assets" element={<Overview />} />
           <Route path="users" element={<Overview />} />

@@ -1,6 +1,8 @@
 .landingContainer {
   display: flex;
   background-color: var(--color-contentbackground);
+  overflow: hidden;
+  height: 100vh;
 }
 
 .sidebar {
@@ -14,4 +16,6 @@
 
 .content {
   flex: 1;
+  padding: var(--s-64) var(--s-20) var(--s-20);
+  overflow: auto;
 }

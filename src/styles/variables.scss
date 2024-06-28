@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
 
 /* Fonts */
 
 :root {
-  --font-mulish: "Mulish", sans-serif;
+  --font-mulish: "Assitant", sans-serif;
 
   /* Colors */
   --color-purple: #7f57f1;
@@ -14,6 +14,7 @@
   --color-very-light-grey: #f9fafb;
   --color-grey: #ddd;
   --color-white-smoke: #f1f1f1;
+  --color-white-see-through: #ffffffcc;
 
   --color-success: #27ae60;
   --color-pending: #f39c12;
@@ -21,6 +22,7 @@
   --color-fulfilled: #2ecc71;
 
   /* Spacing */
+  --s-4: 4px;
   --s-8: 8px;
   --s-10: 10px;
   --s-12: 12px;
@@ -32,6 +34,7 @@
   --s-28: 28px;
   --s-32: 32px;
   --s-40: 40px;
+  --s-44: 44px;
   --s-48: 48px;
   --s-64: 64px;
 }

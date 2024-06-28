@@ -1,12 +1,14 @@
 import React from "react";
+
 import "./index.scss";
+import { formatCurrency } from "../../utils";
 
 interface Order {
   order: string;
   date: string;
   customer: string;
   payment: string;
-  total: string;
+  total: number;
   delivery: string;
   items: string;
   fulfillment: string;
@@ -42,7 +44,7 @@ const OrdersTable: React.FC<OrdersTableProps> = ({ orders }) => {
               <td>
                 <span className={`status ${order.payment.toLowerCase()}`}>{order.payment}</span>
               </td>
-              <td>{order.total}</td>
+              <td>{formatCurrency(order.total)}</td>
               <td>{order.delivery}</td>
               <td>{order.items}</td>
               <td>

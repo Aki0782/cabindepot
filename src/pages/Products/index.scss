@@ -1,6 +1,12 @@
 .productsContainer {
-  h1 {
-    margin-bottom: var(--s-20);
+  .header {
+    padding-bottom: var(--s-20);
+    align-content: center;
+
+    display: flex;
+    h1 {
+      margin-right: var(--s-32);
+    }
   }
   .listContainer {
     display: flex;

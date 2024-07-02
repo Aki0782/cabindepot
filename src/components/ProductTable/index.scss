@@ -1,0 +1,25 @@
+.productTable {
+  border: solid 1px blue;
+  width: 100%;
+  border-collapse: collapse;
+
+  .table-img {
+    width: 50px;
+  }
+
+  .table-head {
+    border: solid 1px gray;
+
+    background: aliceblue;
+    color: var(--color-background);
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .table-cell {
+    padding: 10px;
+    border: solid 1px gray;
+    background: papayawhip;
+  }
+}

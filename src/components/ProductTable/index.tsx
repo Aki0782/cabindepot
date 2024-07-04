@@ -8,13 +8,15 @@ interface SparePart {
   partNumber: string;
   notes: string;
   webDescription: string;
+  img: string;
 }
 
 interface SparePartsTableProps {
   data: SparePart[];
+  zoomHandler: (imgURL: string) => void;
 }
 
-const ProductTable: React.FC<SparePartsTableProps> = ({ data }) => {
+const ProductTable: React.FC<SparePartsTableProps> = ({ data, zoomHandler }) => {
   return (
     <table className="productTable">
       <thead>
@@ -30,8 +32,8 @@ const ProductTable: React.FC<SparePartsTableProps> = ({ data }) => {
         {data.map((part, index) => (
           <tr key={index}>
             <td className="table-cell">{part.accessName}</td>
-            <td className="table-cell">
-              <img className="table-img" src={part.photo} alt="Part" />
+            <td onClick={() => zoomHandler(part.img)} className="table-cell">
+              <img className="table-img" src={part.img} alt="Part" />
             </td>
             <td className="table-cell">{part.partNumber}</td>
             <td className="table-cell">{part.notes}</td>

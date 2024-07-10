@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Landing from "./pages/Landing";
+import Naming from "./pages/Naming";
 import Orders from "./pages/Orders/Orders";
 import Overview from "./pages/Overview";
 import Products from "./pages/Products";
@@ -17,6 +18,7 @@ const App: React.FC = () => {
           <Route path="contacts" element={<Overview />} />
           <Route path="assets" element={<Overview />} />
           <Route path="users" element={<Overview />} />
+          <Route path="naming" element={<Naming />} />
         </Route>
       </Routes>
     </BrowserRouter>

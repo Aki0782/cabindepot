@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import "./index.scss";
 
 import { Input, ProductTable } from "../../components";
-// import WebScraper from "../../components/Scrape/Scrape";
 
 const Products = () => {
   const zoomedImageRef = useRef<HTMLDivElement | null>(null);
@@ -73,7 +72,6 @@ const Products = () => {
         <div className="listContainer">
           <ProductTable zoomHandler={zoomHandler} data={data} />
         </div>
-        {/* <WebScraper /> */}
       </div>
       {imageUrl && (
         <div onClick={handleClickOutside} className="zoomedImage" ref={zoomedImageRef}>

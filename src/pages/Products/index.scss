@@ -14,3 +14,20 @@
     gap: var(--s-24);
   }
 }
+
+.zoomedImage {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  img {
+    width: 700px;
+    height: 700px;
+    object-fit: contain;
+  }
+}

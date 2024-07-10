@@ -4,7 +4,8 @@ import {
   MdOutlineShoppingCartCheckout,
   MdOutlineContacts,
   MdOutlineInsertDriveFile,
-  MdOutlineShoppingCart
+  MdOutlineShoppingCart,
+  MdDriveFileRenameOutline
 } from "react-icons/md";
 import { TbUserCog } from "react-icons/tb";
 import { NavLink, useLocation } from "react-router-dom";
@@ -21,6 +22,11 @@ const SideBar: React.FC<SideBarProps> = ({ getCompoentName }) => {
       name: "Overview",
       path: "",
       icon: <MdDashboard />
+    },
+    {
+      name: "Naming",
+      path: "/naming",
+      icon: <MdDriveFileRenameOutline />
     },
     {
       name: "Orders",
